@@ -23,4 +23,4 @@ The example below shows countries with an area of 250,000-300,000 sq. km. Modify
 Solution:
 SELECT name, area 
 FROM world
-WHERE area BETWEEN 200000 AND 250000
+WHERE area BETWEEN 200000 AND 250000;
