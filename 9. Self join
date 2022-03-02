@@ -82,7 +82,7 @@ WHERE s1.name = 'Craiglockhart' and a.company = 'LRT';
 and the bus no. and company for the second bus. 
 
 Solution:
-SELECT DISTINCT first_train.num, first_train.company, my_stop.name, second_train.num, second_train.company
+SELECT DISTINCT first_train.num, first_train.company, ustop.name, second_train.num, second_train.company
 FROM
 (
 	SELECT a.num, a.company, b.stop
@@ -103,5 +103,5 @@ JOIN
 	FROM stops
 	WHERE name = 'Lochend') 
 ) AS second_train ON (first_train.stop = second_train.stop)
-JOIN stops AS my_stop ON (first_train.stop = my_stop.id)
-ORDER BY first_train.num, my_stop.name, second_train.num;
+JOIN stops AS ustop ON (first_train.stop = ustop.id)
+ORDER BY first_train.num, ustop.name, second_train.num
