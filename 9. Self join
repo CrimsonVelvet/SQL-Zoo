@@ -104,4 +104,4 @@ JOIN
 	WHERE name = 'Lochend') 
 ) AS second_train ON (first_train.stop = second_train.stop)
 JOIN stops AS ustop ON (first_train.stop = ustop.id)
-ORDER BY first_train.num, ustop.name, second_train.num
+ORDER BY first_train.num, ustop.name, second_train.num;
