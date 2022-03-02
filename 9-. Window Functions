@@ -50,7 +50,8 @@ WHERE constituency BETWEEN 'S14000021' AND 'S14000026' AND yr  = 2017 AND votes 
         WHERE ge1.constituency=ge2.constituency AND yr = 2017)
 ORDER BY constituency;
 
-6.
+6. You can use COUNT and GROUP BY to see how each party did in Scotland. Scottish constituencies start with 'S'
+Show how many seats for each party in Scotland in 2017.
 
 Solution:
 SELECT party, COUNT(party) 
